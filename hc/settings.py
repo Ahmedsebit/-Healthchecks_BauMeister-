@@ -19,6 +19,11 @@ ALLOWED_HOSTS = []
 DEFAULT_FROM_EMAIL = 'healthchecks@example.org'
 USE_PAYMENTS = False
 
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST_USER = 'Ahmed.yusuf'
+EMAIL_HOST_PASSWORD = 'BauMeister17'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 
 INSTALLED_APPS = (
     'django.contrib.admin',
@@ -141,6 +146,8 @@ PUSHOVER_API_TOKEN = None
 PUSHOVER_SUBSCRIPTION_URL = None
 PUSHOVER_EMERGENCY_RETRY_DELAY = 300
 PUSHOVER_EMERGENCY_EXPIRATION = 86400
+
+
 
 # Pushbullet integration -- override these in local_settings
 PUSHBULLET_CLIENT_ID = None

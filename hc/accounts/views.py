@@ -1,6 +1,8 @@
 import uuid
 import re
 
+
+from django.core.mail import send_mail
 from django.contrib import messages
 from django.contrib.auth import login as auth_login
 from django.contrib.auth import logout as auth_logout
@@ -93,6 +95,7 @@ def logout(request):
 
 
 def login_link_sent(request):
+    send_mail('Subject here', 'Here is the message.', 'Ahmedamed@gmail.com', ['Ahmedamedy@gmail.com'], fail_silently=False)
     return render(request, "accounts/login_link_sent.html")
 
 
